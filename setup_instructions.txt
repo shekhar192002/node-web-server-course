@@ -1,0 +1,20 @@
+Generate SSH Keys gor GIT
+================================================================
+ssh-keygen -t rsa -b 4096 -C 'shekhar192002@gmail.com'
+
+Check the SSH Key for Git
+=====================================================
+ls -al ~/.ssh
+
+Setting up the key
+===================================================
+eval "$(ssh-agent -s)"
+
+Agent pid 64288
+
+ssh-add ~/.ssh/id_rsa
+
+Copy the prublic key
+========================================
+clip < ~/.ssh/id_rsa.pub
+
