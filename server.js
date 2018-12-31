@@ -22,7 +22,7 @@ app.use((req,res,next) => {
     console.log(log);
 
     fs.appendFile("server.log",log + '\n',(err) => {
-        if(error){
+        if(err){
             console.log("Error while writing the server log");
         }
     });
